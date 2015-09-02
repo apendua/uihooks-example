@@ -1,0 +1,17 @@
+<head>
+</head>
+
+<body>
+    <div class="ui page grid">
+        <div class="sixteen wide columnn">
+            <button class="ui primary button" data-action="create">
+                Add random post
+            </button>
+        </div>
+        {{#each posts}}
+        <div class="sixteen wide columnn" data-action="remove">
+            {{> singlePost}}
+        </div>
+        {{/each}}
+    </div>
+</body>

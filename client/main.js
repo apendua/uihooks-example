@@ -1,19 +1,19 @@
 Template.body.onRendered(function() {
     var container = this.$('.ui.page.grid')[0];
     container._uihooks = {
-        insertElement: function(node, next) {
-            var $node = $(node);
-            container.insertBefore(node, next);
-            // can't use Meteor.setTimeout here because
-            // it will complain about setting timeouts
-            // inside simulations ...
-            setTimeout(function() {
-                $node.addClass('visible');
-            }, 10);
-        },
+        // insertElement: function(node, next) {
+        //     var $node = $(node);
+        //     container.insertBefore(node, next);
+        //     // can't use Meteor.setTimeout here because
+        //     // it will complain about setting timeouts
+        //     // inside simulations ...
+        //     setTimeout(function() {
+        //         $node.find('.post').addClass('visible');
+        //     }, 10);
+        // },
         removeElement: function(node) {
             var $node = $(node);
-            $node.removeClass('visible');
+            $node.find('.post').removeClass('visible');
             setTimeout(function() {
                 $node.remove();
             }, 1000);

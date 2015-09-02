@@ -1,5 +1,5 @@
 
-.ui.piled.post.segment {
+.ui.stacked.post.segment {
     cursor: pointer;
     margin-top: -100%;
     opacity: 0;
@@ -7,7 +7,7 @@
     z-index: -1;
 }
 
-.visible .ui.piled.post.segment {
+.ui.stacked.visible.post.segment {
     margin-top: 16px;
     opacity: 1;
     z-index: 0;
